@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --bg-obsidian: #0b0a09;
+  --bg-charcoal: #141210;
+  --bg-stone: #1e1b18;
+  --text-cream: #f5efe6;
+  --text-muted: #a89f91;
+  --accent-ember: #d93829;
+  --accent-gold: #e8a849;
+  --accent-calamansi: #84cc16;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-obsidian);
+  color: var(--text-cream);
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-cream);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Subtle film grain overlay for tactile izakaya atmosphere */
+.bg-grain {
+  background-image: radial-gradient(rgba(232, 168, 73, 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0a09;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2621;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d93829;
+}
