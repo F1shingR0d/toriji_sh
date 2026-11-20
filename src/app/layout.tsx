@@ -1,40 +1,40 @@
 import type { Metadata } from "next";
 import {
-  Syne,
   Cormorant_Garamond,
-  Plus_Jakarta_Sans,
-  JetBrains_Mono,
+  Inter,
+  Noto_Serif_SC,
+  Noto_Sans_SC,
 } from "next/font/google";
 import "./globals.css";
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  weight: ["600", "700", "800"],
-});
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
   style: ["normal", "italic"],
-  weight: ["500", "600", "700"],
-});
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
   weight: ["400", "500", "600", "700"],
 });
 
-const jetbrains = JetBrains_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+});
+
+const notoSerifSC = Noto_Serif_SC({
+  subsets: ["latin"],
+  variable: "--font-noto-serif-sc",
+  weight: ["500", "600", "700"],
+});
+
+const notoSansSC = Noto_Sans_SC({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-sc",
   weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title:
-    "TORI-JI (托利齐) | Award-Winning Japanese × Filipino Izakaya & Yakitori in Shanghai",
+    "TORI-JI (托利齐) | The Art of Yakitori · Japanese × Filipino Izakaya in Shanghai",
   description:
     "Named Japanese Restaurant of the Year at the That's Shanghai Food & Drink Awards 2025. Experience handcrafted binchotan yakitori, Boneless Chicken Inasal, sizzling Yakitori Sisig Skillets, Palabok Tsukemen, and Koibumi cocktails at 549 Xinhui Road, Putuo District, Shanghai.",
   keywords: [
@@ -52,17 +52,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TORI-JI | Japanese × Filipino Izakaya in Shanghai (@toriji_sh)",
     description:
-      "Winner of Japanese Restaurant of the Year (That's Shanghai Food & Drink Awards 2025). Open-fire binchotan yakitori meets soulful Filipino flavors & late-night community at 549 Xinhui Rd, Putuo, Shanghai.",
+      "Winner of Japanese Restaurant of the Year (That's Shanghai Food & Drink Awards 2025). Open-fire binchotan yakitori meets soulful Filipino flavors at 549 Xinhui Rd, Putuo, Shanghai.",
     url: "https://www.instagram.com/toriji_sh/",
     siteName: "TORI-JI Shanghai",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/images/storefront-night.jpg",
-        width: 845,
-        height: 907,
-        alt: "Tori-Ji Japanese-Filipino Izakaya Storefront at 549 Xinhui Road, Shanghai",
+        url: "/images/yakitori-open-fire.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Open-fire binchotan yakitori at Tori-Ji Izakaya, Shanghai",
       },
     ],
   },
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TORI-JI | Japanese × Filipino Izakaya in Shanghai",
     description:
-      "Winner: Japanese Restaurant of the Year (That's Shanghai Awards 2025). Binchotan yakitori, Filipino street soul & cocktails at 549 Xinhui Rd, Shanghai.",
-    images: ["/images/storefront-night.jpg"],
+      "Winner: Japanese Restaurant of the Year (That's Shanghai Awards 2025). Binchotan yakitori, Filipino flavors & cocktails at 549 Xinhui Rd, Shanghai.",
+    images: ["/images/yakitori-open-fire.jpg"],
   },
 };
 
@@ -86,7 +86,6 @@ export default function RootLayout({
     name: "TORI-JI (Tori-Ji·托利齐·烧鸟大师小酒馆·居酒屋)",
     alternateName: ["Tori-Ji Shanghai", "toriji_sh"],
     image: [
-      "/images/storefront-night.jpg",
       "/images/yakitori-open-fire.jpg",
       "/images/yakitori-skillet-sisig.jpg",
       "/images/palabok-tsukemen.jpg",
@@ -136,9 +135,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${cormorant.variable} ${jakarta.variable} ${jetbrains.variable}`}
+      className={`${cormorant.variable} ${inter.variable} ${notoSerifSC.variable} ${notoSansSC.variable}`}
     >
-      <body className="antialiased selection:bg-[#d93829] selection:text-white">
+      <body className="antialiased selection:bg-[#B52B27] selection:text-[#F2E9D9]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,65 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --bg-obsidian: #0b0a09;
-  --bg-charcoal: #141210;
-  --bg-stone: #1e1b18;
-  --text-cream: #f5efe6;
-  --text-muted: #a89f91;
-  --accent-ember: #d93829;
-  --accent-gold: #e8a849;
-  --accent-calamansi: #84cc16;
+  --charcoal: #171717;
+  --torii-red: #B52B27;
+  --warm-cream: #F2E9D9;
+  --muted-gold: #C69A50;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-obsidian);
-  color: var(--text-cream);
+  background-color: var(--charcoal);
+  color: var(--charcoal);
+  font-family: var(--font-inter), var(--font-noto-sans-sc), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  background-color: var(--bg-obsidian);
-  color: var(--text-cream);
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: var(--warm-cream);
+  color: var(--charcoal);
+  font-family: var(--font-inter), var(--font-noto-sans-sc), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle film grain overlay for tactile izakaya atmosphere */
-.bg-grain {
-  background-image: radial-gradient(rgba(232, 168, 73, 0.06) 1px, transparent 0);
-  background-size: 28px 28px;
+/* TORI-JI Typography Guide */
+.font-editorial {
+  font-family: var(--font-cormorant), var(--font-noto-serif-sc), Georgia, serif;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.font-body {
+  font-family: var(--font-inter), var(--font-noto-sans-sc), sans-serif;
 }
 
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 38s linear infinite;
+.font-zh-heading {
+  font-family: var(--font-noto-serif-sc), var(--font-cormorant), serif;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+/* Exact desktop scale from Typography Guide (scales smoothly on mobile) */
+.text-hero-heading {
+  font-family: var(--font-cormorant), var(--font-noto-serif-sc), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.75rem, 6vw, 4.75rem); /* up to 76px desktop */
+  line-height: 1.05;
+  letter-spacing: -0.015em;
 }
 
-/* Custom scrollbar */
+.text-section-heading {
+  font-family: var(--font-cormorant), var(--font-noto-serif-sc), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.125rem, 3.8vw, 3rem); /* 36-48px desktop */
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.text-subheading {
+  font-family: var(--font-inter), var(--font-noto-sans-sc), sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem); /* 20-24px desktop */
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.text-body-copy {
+  font-family: var(--font-inter), var(--font-noto-sans-sc), sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.05vw, 1.0625rem); /* 16-18px */
+  line-height: 1.75;
+}
+
+.text-nav-link {
+  font-family: var(--font-inter), var(--font-noto-sans-sc), sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem; /* 13px (within 13-15px guide) */
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.text-btn-label {
+  font-family: var(--font-inter), var(--font-noto-sans-sc), sans-serif;
+  font-weight: 600;
+  font-size: 0.8125rem; /* 13px (within 13-15px guide) */
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Subtle luxury hairline */
+.hairline-gold {
+  height: 1px;
+  background-color: rgba(198, 154, 80, 0.35);
+}
+
+/* Minimalist scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0a09;
+  background: #171717;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2c2621;
-  border-radius: 4px;
+  background: #C69A50;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d93829;
+  background: #B52B27;
 }

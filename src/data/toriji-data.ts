@@ -222,8 +222,8 @@ export const DISHES: DishItem[] = [
     },
     badge: { en: "LATE-NIGHT WARMERS", zh: "深夜暖胃锅物" },
     description: {
-      en: "As our storefront sign says: 'Bubbling, pouring, comforting—warm winter starts here.' Share a steaming pot of Tori Nabe, slurp a bowl of chashu pork ramen, or pair your drinks with handmade pork-and-shrimp Japanese Siomai.",
-      zh: "正如门口立牌所写：“咕嘟咕嘟的幸福，从这一锅开始。” 无论是寒夜里热气腾腾的日式鸡肉锅、浓郁醇厚的叉烧豚骨拉面，还是融入菲式街头灵感的手工猪肉鲜虾日式烧卖，都能抚慰深夜的胃。",
+      en: "Bubbling, pouring, comforting—warm winter nights start here. Share a steaming pot of Tori Nabe, slurp a bowl of chashu pork ramen, or pair your drinks with handmade pork-and-shrimp Japanese Siomai.",
+      zh: "咕嘟咕嘟的温暖，从这一锅开始。无论是寒夜里热气腾腾的日式鸡肉锅、浓郁醇厚的叉烧豚骨拉面，还是融入菲式街头灵感的手工猪肉鲜虾日式烧卖，都能抚慰深夜的胃。",
     },
     image: "/images/ig-brunch-spread.jpg",
   },
