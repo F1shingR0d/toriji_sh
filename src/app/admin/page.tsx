@@ -82,8 +82,8 @@ function AdminDashboardInner() {
     } else {
       setAuthError(
         t(
-          "Incorrect passcode. Default passcode is toriji2026.",
-          "密码不正确，默认管理密码为 toriji2026。"
+          "Incorrect passcode. Please try again.",
+          "密码不正确，请重试。"
         )
       );
     }
@@ -218,9 +218,11 @@ function AdminDashboardInner() {
               <ArrowLeft className="h-4 w-4" />
               <span>{t("Back to Website", "返回网站")}</span>
             </Link>
-            <span className="text-sm font-medium tracking-[0.3em] uppercase text-[#F2E9D9]">
-              TORI-JI
-            </span>
+            <img
+              src="/images/logo-wordmark-transparent.png"
+              alt="TORI-JI Official Logo"
+              className="h-7 w-auto object-contain"
+            />
           </div>
         </header>
 
@@ -253,6 +255,7 @@ function AdminDashboardInner() {
                 <input
                   id="admin-passcode"
                   type="password"
+                  autoComplete="off"
                   value={passcodeInput}
                   onChange={(e) => setPasscodeInput(e.target.value)}
                   placeholder="••••••••••"
@@ -271,17 +274,6 @@ function AdminDashboardInner() {
                 {t("Enter Studio", "进入后台")}
               </button>
             </form>
-
-            <div className="pt-6 border-t border-[#F2E9D9]/12 flex items-center justify-between text-xs text-[#F2E9D9]/55">
-              <span>Passcode: toriji2026</span>
-              <button
-                type="button"
-                onClick={() => setPasscodeInput(ADMIN_PASSCODE)}
-                className="text-[#C69A50] border-b border-[#C69A50]/50 pb-0.5 hover:text-[#F2E9D9]"
-              >
-                {t("Auto-fill", "一键填入")}
-              </button>
-            </div>
           </div>
         </main>
 
