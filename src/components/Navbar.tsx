@@ -37,12 +37,16 @@ export default function Navbar({ onOpenReserve }: NavbarProps) {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-10">
-        {/* Wordmark */}
+        {/* Official TORI-JI Logo */}
         <a
           href="#top"
-          className="text-sm sm:text-base font-medium tracking-[0.32em] uppercase text-[#F2E9D9] transition-opacity hover:opacity-80"
+          className="flex items-center transition-opacity hover:opacity-85 shrink-0"
         >
-          TORI-JI
+          <img
+            src="/images/logo-wordmark-transparent.png"
+            alt="TORI-JI Official Logo"
+            className="h-8 sm:h-9 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Nav Links (Inter Medium 13-15px) */}

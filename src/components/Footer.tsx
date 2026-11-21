@@ -12,10 +12,12 @@ export default function Footer() {
     <footer className="bg-[#171717] text-[#F2E9D9] border-t border-[#C69A50]/20">
       <div className="mx-auto max-w-6xl px-6 sm:px-10 py-14">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-10 border-b border-[#F2E9D9]/10">
-          <div className="space-y-2">
-            <div className="text-sm font-medium tracking-[0.32em] uppercase text-[#F2E9D9]">
-              TORI-JI IZAKAYA
-            </div>
+          <div className="space-y-3">
+            <img
+              src="/images/logo-wordmark-transparent.png"
+              alt="TORI-JI Official Logo"
+              className="h-8 w-auto object-contain"
+            />
             <p className="font-editorial italic text-base text-[#C69A50]">
               {t(
                 "The Art of Yakitori · Japanese × Filipino",

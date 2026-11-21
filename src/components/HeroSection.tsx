@@ -31,8 +31,8 @@ export default function HeroSection({ onOpenReserve }: HeroSectionProps) {
         <div className="relative z-10 my-auto mx-auto max-w-4xl px-6 sm:px-10 py-20 text-center">
           <p className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.34em] text-[#C69A50]">
             {t(
-              "Japanese Restaurant of the Year · That's Shanghai",
-              "《That's Shanghai》年度最佳日本料理餐厅"
+              "Japanese Restaurant of the Year 2025 · That's Shanghai",
+              "2025《That's Shanghai》年度最佳日本料理餐厅"
             )}
           </p>
 
